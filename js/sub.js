@@ -94,7 +94,34 @@ function initHowSlide() {
   // 반응형에서 레이아웃 변동 시 바 넓이 재계산은 JS가 계속 그려주므로 별도 처리 불필요
 }
 
+function companyNav(){
+  const navBox = document.querySelector('.company-nav');
+  if (!navBox) return;
+
+  const items = navBox.querySelectorAll('.nav-item');
+  if (!items.length) return;
+
+  const aboutAs = document.querySelector('.about-as');
+  const history = document.querySelector('.history');
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const target = item.textContent.trim().toLowerCase();
+      if (target === '회사 소개') {
+        aboutAs.style.display = 'block';
+        history.style.display = 'none';
+      } else if (target === '회사 연혁') {
+        aboutAs.style.display = 'none';
+        history.style.display = 'block';
+      }
+    }, { passive: true });
+  });
+
+}
+
 // 예: router.js에서 페이지 로드 완료 시 호출
 document.addEventListener("route:loaded", bindToggle);
-document.addEventListener('DOMContentLoaded', initHowSlide);
 document.addEventListener('route:loaded', initHowSlide);
+
+document.addEventListener("route:DOMContentLoaded", bindToggle);
+document.addEventListener('DOMContentLoaded', initHowSlide);

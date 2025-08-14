@@ -437,7 +437,7 @@ h4 span{
     transition: opacity 0.3s ease;
 }
 .cert-box.is-open {
-    flex-basis: 20vw; /* 커진 크기 */
+    flex-basis: 20vw;
     transform: scale(1.02);
 }
 .cert-box.is-open p {
