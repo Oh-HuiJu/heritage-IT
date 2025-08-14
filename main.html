@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/sub.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="header"> </header>
+    <main id="main-con"></main>
+    <footer id="footer"></footer>
+    <script defer src="./js/router.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/sub.js"></script>
+    <script>/*헤더, 푸터 가져오기*/
+        function includeHTML(id, file) { 
+            fetch(file)
+            .then(res => {
+                if (!res.ok) throw new Error(`${file} ${res.status}`);
+                return res.text();
+            })
+            .then(html => {
+                const el = document.getElementById(id);
+                if (el) el.innerHTML = html;
+            })
+            .catch(err => console.error('Include error:', err));
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            includeHTML("header", "./html/header.html");
+            includeHTML("footer", "./html/footer.html");
+        });
+    </script>
+</body>
+</html>

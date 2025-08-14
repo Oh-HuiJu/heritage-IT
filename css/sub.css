@@ -1,0 +1,450 @@
+.img-main-box{
+    width: 100vw;
+}
+.img-main-box .title{
+    position: absolute;
+    top: 16vw;
+    left: 14vw;
+}
+.img-main-box h1, .img-main-box p{
+    color: #000;
+    font-weight: 200;
+}
+.img-main-box h1{
+    font-size: 3.5vw;
+    margin-bottom: 2vw;
+}
+.img-main-box p{
+    font-size: 1.3vw;
+}
+.img-main-box button{
+    margin-top: 4vw;
+}
+.img-main-box img{
+    width: 100%;
+}
+.img-main-box .title.dark-img h1, .img-main-box .title.dark-img p{
+    color: #fff;
+}
+.box-width{
+    width: 80vw;
+    margin: 0 auto;
+}
+.box-width .img-box{
+    height: 35vw;
+    border-radius: 0.7vw;
+}
+.box-width img{
+    width: 100%;
+}
+.box-width + .img-list{
+    width: fit-content;
+    gap: 3.5vw;
+    margin: 3vw auto;
+    font-size: 1vw;
+    text-align: center;
+}
+.box-width + .img-list div{
+    width: 4vw;
+    height: fit-content;
+}
+.box-width + .img-list img{
+    width: 2vw;
+    margin-bottom: 0.3vw;
+}
+.bar-white{
+    width: 30vw;
+    margin: 0 auto 3vw auto;
+    color: #fff;
+    border-top: 1px solid #fff;
+}
+h4 span{
+    font-weight: 200;
+}
+.img-half{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1vw;
+    flex-wrap: wrap
+}
+.img-half img{
+    width: 1.5vw;
+    margin-bottom: 1vw;
+}
+.img-half p{
+    font-weight: normal;
+    font-size: 1vw;
+}
+.img-half .img-box{
+    position: relative;
+    width: 43vw;
+    height: 35vw;
+    border-radius: 0.7vw;
+    overflow: hidden;
+}
+.img-half .img-box img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+.img-half .img-box img.is-open{
+    opacity: 1;
+}
+.img-half .text-box{
+    flex: 1;
+    text-align: left;
+}
+.img-half .text-box ul li > p{
+    font-size: 1.5vw;
+    padding-left: 1.5vw;
+    line-height: 2.5;
+    background-image: url("../images/btn_under_arrow_black.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 2vw;
+    cursor: pointer;
+}
+.image-center-box{
+    justify-content: space-around;
+}
+.image-center-box img{
+    width: 50%;
+}
+.image-center-box h4{
+    font-size: 2vw;
+    font-weight: normal;
+    margin: 2vw auto;
+}
+.image-center-box button{
+    flex: 0.24;
+    padding: 2vw;
+    height: 30vw;
+}
+.image-center-box.platform{
+    justify-content: center;
+    gap: 2vw;
+
+}
+.image-center-box.platform button{
+    flex: 0 0 calc(30% - 2rem);
+    height: 30vw;
+}
+.image-center-box button img{
+    width: 7.5vw;
+}
+.image-center-box button h5{
+    font-size: 1.5vw;
+    color: #333;
+    margin: 2vw 0;
+}
+.togle-list div{
+    height: 1px; 
+    overflow: hidden;
+    background-color: #f8f8f8;
+    border-radius: 0.7vw;
+    padding: 0 1.5vw;
+    font-size: 1vw;
+    transition: height .35s ease, padding-top .25s ease, padding-bottom .25s ease;
+}
+.togle-list div p{
+    margin: 1.5vw 0;
+}
+.togle-list p.is-open + div{
+    height: 7vw;
+}
+.togle-list button{
+    margin-top: 3vw;
+}
+.brite-list p{
+    opacity: .6;
+}
+.brite-list div{
+    background-color: #fff;
+}
+.brite-list p.is-open, .brite-list div p{
+    opacity: 1;
+}
+.img-box-list > div{
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    margin-bottom: 4vw;
+}
+.img-box-list .con-box div{
+    border-radius: 0.7vw;
+}
+.img-box-list img{
+    width: 100%;
+}
+.img-box-list h5{
+    font-size: 1.3vw;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+.img-box-list p{
+    font-size: 0.8vw;
+    text-align: left;
+    margin-top: 1vw;
+}
+
+.sr-only {
+  position:absolute; 
+  width:1px; 
+  height:1px; 
+  margin:-1px; 
+  padding:0;
+  overflow:hidden; 
+  clip:rect(0 0 0 0); 
+  white-space:nowrap; 
+  border:0;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+  font-weight: 200;
+}
+.compare-table thead{
+    border-bottom: 1px solid #eee;
+}
+.compare-table thead th {
+    font-size: 1rem;
+  font-weight: 700;
+  padding: 2vw 1.2vw;
+}
+.compare-table tbody th {
+  width: 20%;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.compare-table thead th:last-of-type,
+.compare-table tbody th,
+.compare-table tbody td:last-of-type{
+    background: #f9f9f9;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 1vw 3vw;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+.compare-table tr:last-child th,
+.compare-table tr:last-child td {
+  border-bottom: 0;
+}
+.list-3dot, .list-4dot{
+    padding-left: 2vw;
+    font-size: 1.5vw;
+    text-align: left;
+    background-image: url("../images/list-3dot.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+}
+.list-4dot{
+    margin-top: 4vw;
+    background-size: auto 93%;
+    background-image: url("../images/list-4dot.png");
+}
+.list-4dot p:not(:last-of-type){
+    margin-bottom: 3vw;
+}
+.list-3dot p:not(:last-of-type){
+    margin-bottom: 0.6vw;
+}
+.about-us .img-half div:first-of-type{
+    margin-right: 2vw;
+}
+.timeline {
+    width: fit-content;
+    display: grid;
+    grid-auto-rows: auto;
+    row-gap: .5vw;
+    margin: 4vw auto;
+    background-image: url("../images/list-dot.png"); /* 당신의 점이미지 경로 */
+    background-repeat: no-repeat;
+    background-size: auto 63.5vw;  
+    background-position: 18vw 2.9vw;
+}
+.timeline .t-row {
+    display: grid;
+    grid-template-columns: 10vw 8vw 1fr;
+    align-items: start;
+    column-gap: .8vw;
+}
+
+.timeline .year {
+    color: #999;
+    font-weight: lighter;
+    font-size: 4vw;
+    line-height: 1;
+}
+.timeline .month {
+    font-size: 1.5vw;
+    padding-top: 2vw;
+    color: #999;
+}
+.timeline .events p { 
+    text-align: left;
+    font-size: 1.5vw;
+    line-height: 2;
+    padding-top: 2vw;
+}
+.timeline .events p:last-child { 
+    margin-bottom: 0; 
+}
+
+.how-slide-list{
+    display: flex;
+}
+.how-slide-box{
+    display: flex;
+    width: 8.5vw;
+    height: 45vw;
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 2.5vw;
+    background-color: #fff;
+    border-right: .3vw solid #f9f9f9;
+    transition: width 0.35s ease;
+}
+.how-slide-box.is-open{
+    width: 38vw;
+    gap: 4vw;
+    background-color: #f9f9f9;
+    border-radius: 0.7vw;
+    transition: width .5s linear;
+}
+.how-slide-box .left-content{
+    display: none;
+    width: 30vw;
+}
+.how-slide-box.is-open .left-content{
+    display: block;
+}
+.how-slide-list .img-box{
+    height: fit-content;
+}
+.how-slide-box .text-box{
+    display: flex;
+    gap: 1.5vw;
+    margin-top: 2vw;
+}
+.how-slide-box .text-box h1{
+    text-align: left;
+    font-weight: normal;
+}
+.how-slide-box .box-num h1{
+    font-weight: lighter;
+    color: #999;
+}
+.how-slide-box .text-box p{
+    text-align: left;
+    font-size: 1.2vw;
+    margin-top: 1vw;
+}
+.how-slide-box .bar-box{
+    display: none;
+    height: .2vw;
+    background-color: #eee;
+}
+.how-slide-box.is-open .bar-box{
+    display: block;
+}
+.how-slide-box .bar{
+    height: 100%;
+    width: 0%;
+    background-color: #132C6F;
+    transition: width .08s linear;
+}
+.how-slide-box .right-icon p{
+    font-size: .8vw;
+}
+.how-slide-box.is-open .icon-text{
+    display: none;
+}
+
+.company-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    margin: 2vw 0;
+}
+.company-nav nav{
+    padding: 1vw 3vw;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 1.3vw;
+    color: #d9d9d9;
+}
+.company-nav nav.select{
+    color: #333;
+    border-bottom-color: #333;
+}
+.company-center > div{
+    display: flex;
+    gap: 2vw;
+}
+.company-center > div:not(:last-of-type){
+    margin-bottom: 6vw;
+}
+.company-center .img-box{
+    width: 8vw;
+    height: auto;
+}
+.company-center h4{
+    text-align: left;
+    line-height: 4;
+    font-size: 2vw;
+}
+.company-center p{
+    text-align: left;
+    font-size: 1.2vw;
+    margin: 0 0 1vw 8vw;
+}
+
+.certs {
+  display: flex;
+  gap: 1rem;
+}
+
+.cert-box {
+  flex: 0 0 10vw; /* 기본 크기 */
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  transition: flex-basis 0.5s ease, transform 0.5s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cert-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cert-box p {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cert-box.is-open {
+  flex-basis: 30vw; /* 커진 크기 */
+  transform: scale(1.02);
+}
+
+.cert-box.is-open p {
+  opacity: 1;
+}
