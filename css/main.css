@@ -196,7 +196,7 @@ button.btn-big{
 }
 .img-box-full .text-box{
     flex: 1;
-    padding: 6vw;
+    padding: 3vw 4vw;
     text-align: left;
 }
 .img-box-full h4{
@@ -208,7 +208,7 @@ button.btn-big{
     line-height: 1.8;
 }
 .img-box-full .text-box-list{
-    margin: 3vw 0;
+    margin-top: 3vw;
 }
 .img-box-full .text-box-list > div{
     display: flex;

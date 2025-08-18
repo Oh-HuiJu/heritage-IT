@@ -14,7 +14,6 @@ function initHeaderSubmenus() {
 
   // nav의 개별 메뉴들(로고 제외)
   const items = Array.from(nav.querySelectorAll('[data-route]'));
-  console.log('Header items:', items);
 
   let hideTimer = null;
 
