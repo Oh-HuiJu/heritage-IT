@@ -7,7 +7,7 @@
             <p>스마트하고, 확장 가능하며, 지속가능성까지 준비된 솔루션입니다.</p>
             <nav>
                 <hr>
-                <button class="btn-line-wite" type="button">Learn More</button>
+                <button class="btn-line-wite" type="button" data-route="/platform">Learn More</button>
                 <div class="image-slider-nav">
                     <p class="active">실시간 AI 감지</p>
                     <p>스마트 공간 최적화</p>
@@ -26,46 +26,31 @@
         <p>영상을 통해 사람을 모니터링하고, 연기를 감지하며, 흐름의 추적이 가능합니다. 실시간 감지가 가능하며,  하나의 장비, 하나의 플랫폼을 통한 무한한 활용 및 관리가 가능합니다.</p>
         <div class="img-box-full">
             <div class="img-box">
-                <img src="./images/smartoko_logo_dark.png" alt="SmartOkO">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/hgDjdtVo-1g" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
             <div class="text-box">
                 <h4>SmartOkO</h4>
                 <p>모든 연결된 공간 및 기기에서 AI 기반 인사이트를 통합합니다. Open API 플랫폼과 V-ECU를 통해 감지, 에너지, 보안을 웹과 모바일에서 간편하게 관리할 수 있습니다.</p>
-                <div class="img-list">
+                <div class="text-box-list">
                     <div>
-                        <img src="./images/001-fire.png" alt="fire">
+                        <img src="/images/platform-2-01.png" alt="">
+                        <p>물리적인 장치 없이 소프트웨어 API를 통해 연결됩니다.</p>
                     </div>
                     <div>
-                        <img src="./images/002-band.png" alt="Fall">
-                    </div>
-                    <div>
-                        <img src="./images/003-helmet.png" alt="PPE">
-                    </div>
-                    <div>
-                        <img src="./images/004-factory.png" alt="smoke">
-                    </div>
-                    <div>
-                        <img src="./images/005-lifeJacket.png" alt="person">
-                    </div>
-                    <div>
-                        <img src="./images/006-binoculars.png" alt="crowd">
-                    </div>
-                    <div>
-                        <img src="./images/007-footprint.png" alt="pets">
-                    </div>
-                    <div>
-                        <img src="./images/008-boots.png" alt="wander">
-                    </div>
-                    <div>
-                        <img src="./images/009-jeep.png" alt="vehicle">
-                    </div>
-                    <div>
-                        <img src="./images/010-knife.png" alt="weapon">
+                        <img src="/images/platform-2-02.png" alt="">
+                        <p>카메라가 아닌 네트워크에 연결되므로 하드웨어 변경이 필요 없습니다.</p>
                     </div>
                 </div>
-                <div class="btn-box-two">
-                    <button class="btn-line-gray" type="button">Learn More</button>
-                    <button class="btn-bg-blue" type="button">Contact Us</button>
+                <div class="btn-box-right">
+                    <button class="btn-line-gray" type="button" data-route="/platform">Learn More</button>
                 </div>
             </div>
         </div>
@@ -125,7 +110,9 @@
                     <div class="main-slide-box active">
                         <h3><span>01</span>간편한 구축과 손쉬운 연동</h3>
                         <div>
-                            <img src="./images/slide-01.png" alt="slide-01">
+                            <div class="slide-img-box">
+                                <img src="./images/slide-01.png" alt="slide-01">
+                            </div>
                             <div class="slide-text">
                                 <p class="title-sub">AI 장비를 몇 분 만에 설치하고 기존 CCTV 시스템에 바로 연결하세요.온프레미스 서버는 필요하지 않으며, 모든 기능은 클라우드 기반 플랫폼에서 직관적으로 관리됩니다.웹과 모바일을 통해 언제 어디서나 접근 가능합니다.</p>
                                 <p>올인원 구조 (온프레미스 서버 불필요)</p>
@@ -137,7 +124,9 @@
                     <div class="main-slide-box">
                         <h3><span>02</span>중요 상황 즉시 감지</h3>
                         <div>
-                            <img src="./images/slide-02.png" alt="slide-01">
+                            <div class="slide-img-box">
+                                <img src="./images/slide-02.png" alt="slide-01">
+                            </div>
                             <div class="slide-text">
                                 <p class="title-sub">SmartOkO는 기존 CCTV 영상만으로 화재, 연기, 낙상, 침입 등 주요 상황을 실시간으로 감지합니다. 별도의 장비 교체 없이 바로 적용됩니다.</p>
                                 <p>실시간 감지</p>
@@ -149,7 +138,9 @@
                     <div class="main-slide-box">
                         <h3><span>03</span>에너지를 최적화하고 탄소 배출을 줄이세요</h3>
                         <div>
-                            <img src="./images/slide-03.png" alt="slide-01">
+                            <div class="slide-img-box">
+                                <img src="./images/slide-03.png" alt="slide-01">
+                            </div>
                             <div class="slide-text">
                                 <p class="title-sub">SmartOkO는 공간 내 인원 흐름과 행동 패턴을 인식하여 조명, 냉난방 등의 에너지 사용을 자동 조절합니다. 탄소 배출량을 줄이고, 운영 효율을 극대화합니다.</p>
                                 <p>냉난방 최적화</p>
@@ -161,7 +152,9 @@
                     <div class="main-slide-box">
                         <h3><span>04</span>실시간으로 더 똑똑한 대응</h3>
                         <div>
-                            <img src="./images/slide-04.png" alt="slide-01">
+                            <div class="slide-img-box">
+                                <img src="./images/slide-04.png" alt="slide-01">
+                            </div>
                             <div class="slide-text">
                                 <p class="title-sub">martOkO는 이상 상황을 감지하면 경고음, 조명, 관리자 알림 등을 즉시 작동시킵니다. 빠르고 정확한 대응으로 사고를 줄이고, 대응 속도를 높입니다.</p>
                                 <p>즉시 경고</p>
@@ -173,7 +166,9 @@
                     <div class="main-slide-box">
                         <h3><span>05</span>모든 공간을 위한 통합 플랫폼</h3>
                         <div>
-                            <img src="./images/slide-01.png" alt="slide-01">
+                            <div class="slide-img-box">
+                                <img src="./images/slide-01.png" alt="slide-01">
+                            </div>
                             <div class="slide-text">
                                 <p class="title-sub">martOkO는 건물, 물류창고, 리테일, 스마트시티 등 모든 공간에 유연하게 적용됩니다. 인프라 변경 없이도 하나의 AI 플랫폼으로 확장 가능합니다.</p>
                                 <p>유연한 배포 구조</p>
@@ -256,6 +251,6 @@
         <h3>SmartOkO 무료 체험하기</h3>
         <p>30일 데모를 통해 실시간 AI 감지와 스마트 빌딩 인사이트를 경험해보세요.</p> 
         <p>기존 CCTV를 그대로 연결하고 즉시 분석을 시작하세요 — 하드웨어 교체는 필요 없습니다.</p>
-        <button class="btn-bg-dark btn-big" type="button">무료 데모 시작하기</button>
+        <button class="btn-bg-dark btn-big" type="button" data-route="https://beta.smartoko.com">무료 데모 시작하기</button>
     </div>
 </section>

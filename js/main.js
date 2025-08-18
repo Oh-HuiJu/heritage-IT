@@ -14,6 +14,7 @@ function initHeaderSubmenus() {
 
   // nav의 개별 메뉴들(로고 제외)
   const items = Array.from(nav.querySelectorAll('[data-route]'));
+  console.log('Header items:', items);
 
   let hideTimer = null;
 
@@ -232,12 +233,6 @@ function initFeatureSlider() {
 /* ---------- 라우터 연동 ---------- */
 // 라우터가 페이지를 main에 넣은 뒤 호출
 document.addEventListener("route:loaded", () => {
-  initHeaderSubmenus();
-  initHeroSlider();
-  initFeatureSlider();
-});
-// 첫 진입 시(정적 컨텐츠가 이미 있을 수도)
-document.addEventListener("DOMContentLoaded", () => {
   initHeaderSubmenus();
   initHeroSlider();
   initFeatureSlider();

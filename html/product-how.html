@@ -15,7 +15,7 @@
         <p>기존 CCTV에 RTSP/IP로 손쉽게 연결 — 교체가 필요하지 않습니다.</p>
         <div class="box-width">
             <div class="how-slide-list">
-                <div class="how-slide-box"><!--01.데이터 수집 및 전처리-->
+                <div class="how-slide-box is-open" onclick="bindToggleBox(this)"><!--01.데이터 수집 및 전처리-->
                     <div class="left-content">
                         <div class="img-box">
                             <img src="../images/product-how-1-07.png" alt="">
@@ -38,7 +38,7 @@
                         <p class="icon-text">데이터 작업</p>
                     </div>
                 </div>
-                <div class="how-slide-box"><!--02.사전 학습 모델 선택-->
+                <div class="how-slide-box" onclick="bindToggleBox(this)"><!--02.사전 학습 모델 선택-->
                     <div class="left-content">
                         <div class="img-box">
                             <img src="../images/product-how-1-08.png" alt="">
@@ -61,7 +61,7 @@
                         <p class="icon-text">사전 학습 모델 선택</p>
                     </div>
                 </div>
-                <div class="how-slide-box"><!--03.모델 환경 맞춤화-->
+                <div class="how-slide-box" onclick="bindToggleBox(this)"><!--03.모델 환경 맞춤화-->
                     <div class="left-content">
                         <div class="img-box">
                             <img src="../images/product-how-1-09.png" alt="">
@@ -84,7 +84,7 @@
                         <p class="icon-text">모델 환경 맞춤화</p>
                     </div>
                 </div>
-                <div class="how-slide-box"><!--04.정밀 튜닝-->
+                <div class="how-slide-box" onclick="bindToggleBox(this)"><!--04.정밀 튜닝-->
                     <div class="left-content">
                         <div class="img-box">
                             <img src="../images/product-how-1-10.png" alt="">
@@ -107,7 +107,7 @@
                         <p class="icon-text">정밀 튜닝</p>
                     </div>
                 </div>
-                <div class="how-slide-box"><!--05.평가 및 튜닝-->
+                <div class="how-slide-box" onclick="bindToggleBox(this)"><!--05.평가 및 튜닝-->
                     <div class="left-content">
                         <div class="img-box">
                             <img src="../images/product-how-1-11.png" alt="">
@@ -130,7 +130,7 @@
                         <p class="icon-text">정밀 튜닝</p>
                     </div>
                 </div>
-                <div class="how-slide-box is-open"><!--06.배포-->
+                <div class="how-slide-box" onclick="bindToggleBox(this)"><!--06.배포-->
                     <div class="left-content">
                         <div class="img-box">
                             <img src="../images/product-how-1-12.png" alt="">
@@ -157,18 +157,20 @@
         </div>
     </div>
     <div class="content-box"><!--SmartOkO가 감지하는 항목-->
-        <div class="box-width img-half">
-            <div class="img-box">
-                <img class="is-open" src="../images/product-image02.png" alt="Real-time detection and automated alerts">
-            </div>
-            <div class="text-box" style="margin-left: 2vw;">
-                <h2>SmartOkO가 감지하는 항목</h2>
-                <p style="margin-top: 1vw;">화재부터 군중 감지까지 — AI가 실시간으로 무엇을 식별하는지 확인해보세요.</p>
-                <div class="list-4dot">
-                    <p class="text-bold">기존 CCTV 영상 스트림</p>
-                    <p>V-ECU 또는 AI 모델 처리</p>
-                    <p>감지된 라벨 출력</p>
-                    <p>트리거 → 알림 / 액션 / 대시보드 연동</p>
+        <div class="box-width">
+            <div class="img-half">
+                <div class="img-box">
+                    <img class="is-open" src="../images/product-image02.png" alt="Real-time detection and automated alerts">
+                </div>
+                <div class="text-box" style="margin-left: 2vw;">
+                    <h2>SmartOkO가 감지하는 항목</h2>
+                    <p style="margin-top: 1vw;">화재부터 군중 감지까지 — AI가 실시간으로 무엇을 식별하는지 확인해보세요.</p>
+                    <div class="list-4dot">
+                        <p class="text-bold">기존 CCTV 영상 스트림</p>
+                        <p>V-ECU 또는 AI 모델 처리</p>
+                        <p>감지된 라벨 출력</p>
+                        <p>트리거 → 알림 / 액션 / 대시보드 연동</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -218,10 +220,10 @@
     </div>
     <section class="banner-btn">
         <div>
-            <h4>귀하의 사이트 또는 시스템에 확장 가능한 AI가 필요하신가요?</h4>
-            <p>기술 세부사항, 가격, 통합 가이드를 원하신다면 문의해주세요.</p>
+            <h4>SmartOkO 실시간 데모를 체험해보세요</h4>
+            <p>우리의 AI가 귀하의 공간에서 실시간으로 어떻게 작동하는지 확인해보세요.</p>
         </div>
-        <button class="btn-bg-blue btn-big" type="button">문의하기</button>
+        <button class="btn-bg-blue btn-big" type="button" rdata-route="https://beta.smartoko.com">무료 데모 시작하기</button>
     </section>
     <div class="content-box"><!--스트림에서 인사이트까지-->
         <h2>스트림에서 인사이트까지</h2>

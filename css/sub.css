@@ -1,21 +1,6 @@
-.img-main-box{
-    width: 100vw;
-}
-.img-main-box .title{
-    position: absolute;
-    top: 16vw;
-    left: 14vw;
-}
 .img-main-box h1, .img-main-box p{
     color: #000;
     font-weight: 200;
-}
-.img-main-box h1{
-    font-size: 3.5vw;
-    margin-bottom: 2vw;
-}
-.img-main-box p{
-    font-size: 1.3vw;
 }
 .img-main-box button{
     margin-top: 4vw;
@@ -74,6 +59,7 @@ h4 span{
     margin-bottom: 1vw;
 }
 .img-half p{
+    flex: 1;
     font-weight: normal;
     font-size: 1vw;
 }
@@ -100,10 +86,13 @@ h4 span{
     flex: 1;
     text-align: left;
 }
+.img-half .text-box ul li{
+    padding: 1vw 0;
+}
 .img-half .text-box ul li > p{
     font-size: 1.5vw;
     padding-left: 1.5vw;
-    line-height: 2.5;
+    margin-bottom: 1vw;
     background-image: url("../images/btn_under_arrow_black.png");
     background-position: right center;
     background-repeat: no-repeat;
@@ -307,6 +296,7 @@ h4 span{
     display: flex;
 }
 .how-slide-box{
+    position: relative;
     display: flex;
     width: 8.5vw;
     height: 45vw;
@@ -314,22 +304,29 @@ h4 span{
     justify-content: space-between;
     padding: 2.5vw;
     background-color: #fff;
-    border-right: .3vw solid #f9f9f9;
-    transition: width 0.35s ease;
+    transition: width 0.5s ease;
+}
+.how-slide-box::after {
+  content: "";
+  position: absolute;
+  top: 1%;
+  right: 0;
+  height: 98%;
+  width: 0.2vw;
+  background-color: #f9f9f9;
 }
 .how-slide-box.is-open{
     width: 38vw;
     gap: 4vw;
     background-color: #f9f9f9;
     border-radius: 0.7vw;
-    transition: width .5s linear;
 }
 .how-slide-box .left-content{
-    display: none;
-    width: 30vw;
+    margin-left: -35vw;
+    transition: margin-left 0.5s ease;
 }
 .how-slide-box.is-open .left-content{
-    display: block;
+    margin-left: 0;
 }
 .how-slide-list .img-box{
     height: fit-content;
@@ -364,7 +361,14 @@ h4 span{
     height: 100%;
     width: 0%;
     background-color: #132C6F;
-    transition: width .08s linear;
+    transition: width .1s linear;
+}
+.how-slide-box .right-icon{
+    width: 3vw;
+}
+.how-slide-box .right-icon img{
+    width: 3vw;
+    height: 3vw;
 }
 .how-slide-box .right-icon p{
     font-size: .8vw;
@@ -416,6 +420,7 @@ h4 span{
     display: flex;
     align-items: center;
     gap: 3vw;
+    margin-left: -4vw;
 }
 .cert-box {
     flex: 0 0 15vw;
