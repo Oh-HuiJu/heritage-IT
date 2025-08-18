@@ -104,8 +104,7 @@ button.btn-big{
 .img-slider-box, .img-main-box{
     position: relative;
     width: 100vw;
-    height: 48vw;
-    margin-top: 4vw;
+    margin-top: 5vw;
     overflow: hidden;
 }
 .title{

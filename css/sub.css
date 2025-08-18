@@ -86,8 +86,27 @@ h4 span{
     flex: 1;
     text-align: left;
 }
+.customers .text-box {
+    padding: 4vw;
+}
+.text-box h3{
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+.text-box p{
+    font-size: 1.2vw;
+    line-height: 1.5;
+    margin-bottom: 2vw;
+}
 .img-half .text-box ul li{
     padding: 1vw 0;
+}
+.customers .text-box  ul{
+    list-style:inside
+}
+.customers .text-box  ul li{
+    font-size: 1.2vw;
+    padding: .6vw 0;
 }
 .img-half .text-box ul li > p{
     font-size: 1.5vw;
@@ -389,6 +408,7 @@ h4 span{
     border-bottom: 1px solid #d9d9d9;
     font-size: 1.3vw;
     color: #d9d9d9;
+    cursor: pointer;
 }
 .company-nav nav.select{
     color: #333;
@@ -420,16 +440,18 @@ h4 span{
     display: flex;
     align-items: center;
     gap: 3vw;
-    margin-left: -4vw;
+    margin-left: 4vw;
+    position: relative; 
 }
 .cert-box {
-    flex: 0 0 15vw;
+    flex: 0 0 10vw;
     background: #fff;
-    transition: flex-basis 0.5s ease, transform 0.5s ease;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform .35s ease, flex-basis .35s ease;
+    will-change: transform;
 }
 .cert-box img {
     width: 100%;

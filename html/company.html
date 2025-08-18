@@ -1,6 +1,6 @@
 <section>
     <div class="img-main-box">
-        <div class="title dark-img">
+        <div class="title dark-img"  style="text-align: center;">
             <h1>SmartOkO 소개</h1>
             <p>우리는 안전, 효율성, 지속가능성을 위한 </p>
             <p>AI 기반 공간 분석에 특화되어 있습니다.</p>
@@ -10,10 +10,10 @@
         </div>
     </div>
     <section class="company-nav">
-        <nav class="select">회사 소개</nav>
-        <nav>회사 연혁</nav>
+        <nav data-target="about" class="select">회사 소개</nav>
+        <nav data-target="history">회사 연혁</nav>
     </section>
-    <div class="about-us" style="display: none;">
+    <div class="about-us">
         <div class="content-box"><!--더 안전하고 스마트한 공간을 위한 AI 영상 인텔리전스 -->
             <h2>더 안전하고 스마트한 공간을 위한 AI 영상 인텔리전스 <br> — 지금 보유한 장비만으로 구현됩니다.</h2>
             <div class="box-width">
@@ -29,13 +29,13 @@
                         <img class="is-open" src="../images/company-02-01.png" alt="Our Story">
                     </div>
                     <div class="text-box">
-                        <h4>Our Story</h4>
+                        <h3>Our Story</h3>
                         <p>대부분의 건물은 영상 데이터로 가득하지만, 실시간 인사이트로 전환할 도구는 부족합니다. <br>기존 솔루션은 고가의 하드웨어, 서버 설치, 수 주간의 구축 기간을 요구합니다.</p>
                     </div>
                 </div>
                 <div class="img-half" style="margin: 4vw 0;">
                     <div class="text-box">
-                        <h4 style="text-align: right;">Our Solution</h4>
+                        <h3 style="text-align: right;">Our Solution</h3>
                         <p style="text-align: right;">SmartOkO는 기존 IP 기반 CCTV에 직접 연결되며, 교체가 필요하지 않습니다. <br>기기 내 탑재된 AI 엔진으로 화재, 낙상, 연기, 헬멧 착용 여부를 감지합니다. <br>온프레미스 하드웨어 또는 VSaaS(클라우드 서비스)로 제공되어, 클라우드와 폐쇄망 모두를 지원합니다.</p>
                     </div>
                     <div class="img-box">
@@ -47,7 +47,7 @@
                         <img class="is-open" src="../images/company-02-03.png" alt="Our Story">
                     </div>
                     <div class="text-box">
-                        <h4>Our Vision</h4>
+                        <h3>Our Vision</h3>
                         <p>단일 건물부터 리테일 체인, 물류센터, 스마트시티까지 — 고객의 성장에 맞춰 확장합니다. <br>우리는 감지, 분석, 최적화를 제공하는 플러그 앤 플레이 AI 영상 플랫폼의 글로벌 기준을 만들어갑니다.</p>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
         </div>
     </div>
     </div>
-    <div class="content-box history">
+    <div class="content-box history" style="display: none;">
         <div class="content-box"><!--검증과 성과의 타임라인 -->
             <h2>검증과 성과의 타임라인</h2>
             <p>검증된 실증, 주요 성과, 그리고 지속적인 혁신의 기록입니다.</p>
@@ -198,36 +198,34 @@
         </div>
         <div class="content-box"><!--인증 및 특허 외-->
             <h2>인증 및 특허 외</h2>
-            <div>
-                <div class="certs" id="certs">
-                    <div class="cert-box">
-                        <img src="../images/cert1.png" alt="">
-                        <p>벤처기업확인서</p>
-                    </div>
-                    <div class="cert-box is-open">
-                        <img src="../images/cert2.png" alt="">
-                        <p>인테리어공사 현장관제서비스 특허</p>
-                    </div>
-                    <div class="cert-box">
-                        <img src="../images/cert3.png" alt="">
-                        <p>건설공사 현장관제 서비스 특허</p>
-                    </div>
-                    <div class="cert-box">
-                        <img src="../images/cert4.png" alt="">
-                        <p>기업부설연구소 인정서</p>
-                    </div>
-                    <div class="cert-box">
-                        <img src="../images/cert5.png" alt="">
-                        <p>Spoot View 저작권</p>
-                    </div>
-                    <div class="cert-box">
-                        <img src="../images/cert6.png" alt="">
-                        <p>기업부설연구소 인정서</p>
-                    </div>
-                    <div class="cert-box">
-                        <img src="../images/cert7.png" alt="">
-                        <p>기업부설연구소 인정서</p>
-                    </div>
+            <div class="certs" id="certs">
+                <div class="cert-box is-open">
+                    <img src="../images/cert2.png" alt="">
+                    <p>인테리어공사 현장관제서비스 특허</p>
+                </div>
+                <div class="cert-box">
+                    <img src="../images/cert3.png" alt="">
+                    <p>건설공사 현장관제 서비스 특허</p>
+                </div>
+                <div class="cert-box">
+                    <img src="../images/cert4.png" alt="">
+                    <p>기업부설연구소 인정서</p>
+                </div>
+                <div class="cert-box">
+                    <img src="../images/cert5.png" alt="">
+                    <p>Spoot View 저작권</p>
+                </div>
+                <div class="cert-box">
+                    <img src="../images/cert6.png" alt="">
+                    <p>기업부설연구소 인정서</p>
+                </div>
+                <div class="cert-box">
+                    <img src="../images/cert7.png" alt="">
+                    <p>기업부설연구소 인정서</p>
+                </div>
+                <div class="cert-box">
+                    <img src="../images/cert1.png" alt="">
+                    <p>벤처기업확인서</p>
                 </div>
             </div>
         </div>
