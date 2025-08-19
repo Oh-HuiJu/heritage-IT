@@ -62,12 +62,10 @@ function langugeSelector() {
       item.classList.add('select');
       updateLangText();
       langBox.classList.remove('is-open');
-      console.log(langBox.classList.contains('is-open') ? 'Language box closed' : 'Language box opened');
     });
   });
   function updateLangText() {
     const selected = langBox.querySelector('.select');
-    if (!selected) return;
     selectLang.textContent = selected.textContent.slice(0, 2).toUpperCase();
   }
 }
