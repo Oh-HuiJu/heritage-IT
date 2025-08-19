@@ -134,29 +134,25 @@ button.btn-big{
     line-height: 1.5;
     color: #fff;
 }
-.img-slider-box nav{
+.title-nav{
+    position: relative;
+    width: 70vw;
+    border-top: 1px solid #fff;
     margin-top: 10vw;
 }
-.img-slider-box hr{
-    width: calc(100vw - 28vw);
-    color: #fff;
-}
-.img-slider-box button{
+.title-nav button{
     position: absolute;
-    bottom: -1vw;
-    right: 0;
+    top: -1vw;
+    right: -8vw;
 }
 .image-slider-nav{
-    position: absolute;
-    bottom: -3.95vw;
-    left: 50%;
-    transform: translateX(-50%);
-    width: fit-content;
     display: flex;
     gap: 10vw;
+    width: fit-content;
+    margin: -0.45vw auto 0 auto;
 }
 .image-slider-nav p{
-    width: 6vw;
+    width: 8vw;
     text-align: center;
     font-weight: normal;
     padding-top: 1.5vw;
@@ -173,9 +169,6 @@ button.btn-big{
 .slide-img-track {
     display: flex;
     transition: transform 0.8s ease;
-}
-.img-main-box button{
-    margin-top: 4vw;
 }
 
 /*본문 공통*/
