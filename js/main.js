@@ -6,62 +6,70 @@ function initHeaderSubmenus() {
   const subProd  = header.querySelector('.nav-sub-products');
   const subComp  = header.querySelector('.nav-sub-company');
 
-  // "어떤 메뉴 → 어떤 서브메뉴" 매핑
   const submenuMap = {
-  "/product-over": subProd,
-  "/company-aboutAs":      subComp
+    "/product-over":  subProd,
+    "/company-aboutAs": subComp
   };
 
-  // nav의 개별 메뉴들(로고 제외)
   const items = Array.from(nav.querySelectorAll('[data-route]'));
 
   let hideTimer = null;
 
   function hideAll() {
-  [subProd, subComp].forEach(el => el && el.classList.remove('is-open'));
-  header.classList.remove('submenu-open');
+    [subProd, subComp].forEach(el => el && el.classList.remove('is-open'));
   }
   function openFor(route) {
-  clearTimeout(hideTimer);
-  hideAll();
-  const sub = submenuMap[route];
-  if (!sub) return;                // 서브 없는 메뉴면 아무것도 안 보임
-  sub.classList.add('is-open');
-  header.classList.add('submenu-open');
+    clearTimeout(hideTimer);
+    hideAll();
+    const sub = submenuMap[route];
+    if (!sub) return; 
+    sub.classList.add('is-open');
   }
   function scheduleHide() {
-  clearTimeout(hideTimer);
-  hideTimer = setTimeout(hideAll, 120);  // 약간의 지연으로 깜빡임 방지
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(hideAll, 120);  // 약간의 지연으로 깜빡임 방지
   }
+  items.forEach(el => {// 메뉴 호버 → 해당 서브 열기 / 떠나면 닫기 예약
+    el.addEventListener('mouseenter', () => openFor(el.dataset.route));
+    el.addEventListener('mouseleave', scheduleHide);
+  });
+  [subProd, subComp].forEach(sub => { // 서브메뉴 위에 마우스 올리면 유지, 벗어나면 닫기
+    if (!sub) return;
+    sub.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+    sub.addEventListener('mouseleave', scheduleHide);
+  });
+  nav.addEventListener('focusin', (e) => { // 키보드 접근성(탭으로 포커스 이동 시 열고/닫기)
+    const el = e.target.closest('[data-route]');
+    if (el) openFor(el.dataset.route);
+  });
+  nav.addEventListener('focusout', (e) => { // 포커스가 헤더/서브메뉴 바깥으로 나가면 닫기
+    const to = e.relatedTarget;
+    if (!header.contains(to)) hideAll();
+  });
+}
+function langugeSelector() {
+  const langBtn = document.querySelector('.btn-lang-box');
+  const langBox = document.querySelector('.box-lang');
+  let selectLang = langBtn.querySelector('.select-lang');
+  const langItems = langBox.querySelectorAll('p');
 
-  // 메뉴 호버 → 해당 서브 열기 / 떠나면 닫기 예약
-  items.forEach(el => {
-  el.addEventListener('mouseenter', () => openFor(el.dataset.route));
-  el.addEventListener('mouseleave', scheduleHide);
+  langBtn.addEventListener('click', () => {
+    langBox.classList.add('is-open');
   });
-
-  // 서브메뉴 위에 마우스 올리면 유지, 벗어나면 닫기
-  [subProd, subComp].forEach(sub => {
-  if (!sub) return;
-  sub.addEventListener('mouseenter', () => clearTimeout(hideTimer));
-  sub.addEventListener('mouseleave', scheduleHide);
+  langItems.forEach(item => {
+    item.addEventListener('click', () => {
+      langItems.forEach(i => i.classList.remove('select'));
+      item.classList.add('select');
+      updateLangText();
+      langBox.classList.remove('is-open');
+      console.log(langBox.classList.contains('is-open') ? 'Language box closed' : 'Language box opened');
+    });
   });
-
-  // 키보드 접근성(탭으로 포커스 이동 시 열고/닫기)
-  nav.addEventListener('focusin', (e) => {
-  const el = e.target.closest('[data-route]');
-  if (el) openFor(el.dataset.route);
-  });
-  nav.addEventListener('focusout', (e) => {
-  // 포커스가 헤더/서브메뉴 바깥으로 나가면 닫기
-  const to = e.relatedTarget;
-  if (!header.contains(to)) hideAll();
-  });
-
-  // 바깥 클릭 시 닫기
-  document.addEventListener('click', (e) => {
-  if (!header.contains(e.target)) hideAll();
-  });
+  function updateLangText() {
+    const selected = langBox.querySelector('.select');
+    if (!selected) return;
+    selectLang.textContent = selected.textContent.slice(0, 2).toUpperCase();
+  }
 }
 
 /* ---------- 공통 유틸 ---------- */
@@ -76,7 +84,7 @@ function alreadyInited(root) {
 const pxGap = el => parseFloat(getComputedStyle(el).gap || '0');
 const pxPadL = el => parseFloat(getComputedStyle(el).paddingLeft || '0');
 
-/* ---------- [A] 상단 이미지 슬라이더 ---------- */
+/* ----------  메인 이미지 슬라이더 ---------- */
 function initHeroSlider() {
   const sliderBox = document.querySelector(".img-slider-box");
   if (!sliderBox || alreadyInited(sliderBox)) return;
@@ -111,7 +119,7 @@ function initHeroSlider() {
   updateSlide(currentIndex);
 }
 
-/* ---------- [B] 기능(Feature) 슬라이더 + 타임바 ---------- */
+/* ---------- 기능(Feature) 슬라이더 + 타임바 ---------- */
 function initFeatureSlider() {
   const section = document.getElementById('feature');
   if (!section || alreadyInited(section)) return;
@@ -230,8 +238,8 @@ function initFeatureSlider() {
 }
 
 /* ---------- 라우터 연동 ---------- */
-// 라우터가 페이지를 main에 넣은 뒤 호출
 document.addEventListener("route:loaded", () => {
+  langugeSelector()
   initHeaderSubmenus();
   initHeroSlider();
   initFeatureSlider();
