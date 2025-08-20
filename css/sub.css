@@ -6,7 +6,6 @@
     margin: 0 auto;
 }
 .box-width .img-box{
-    height: 35vw;
     border-radius: 0.7vw;
 }
 .box-width + .img-list{
@@ -44,7 +43,7 @@ h4 span{
 .img-half .img-box{
     position: relative;
     width: 43vw;
-    height: 35vw;
+    height: fit-content;
     border-radius: 0.7vw;
     overflow: hidden;
 }
@@ -66,7 +65,6 @@ h4 span{
     padding: 4vw;
 }
 .text-box h3{
-    font-size: 2vw;
     margin-bottom: 1vw;
 }
 .text-box p{
@@ -96,6 +94,10 @@ h4 span{
 }
 .image-center-box{
     justify-content: space-around;
+}
+.image-center-box .center-img-box{
+    width: 10vw;
+    margin: 0 auto;
 }
 .image-center-box h4{
     font-size: 2vw;
@@ -134,7 +136,7 @@ h4 span{
     margin: 1.5vw 0;
 }
 .togle-list p.is-open + div{
-    height: 7vw;
+    height: 8vw;
 }
 .togle-list button{
     margin-top: 3vw;
@@ -156,6 +158,7 @@ h4 span{
 }
 .img-box-list .con-box div{
     border-radius: 0.7vw;
+    margin-bottom: 2vw;
 }
 .img-box-list h5{
     font-weight: bold;
@@ -283,10 +286,10 @@ h4 span{
 .how-slide-box{
     position: relative;
     display: flex;
+    justify-content: space-between;
     width: 8.5vw;
     height: 45vw;
     overflow: hidden;
-    justify-content: space-between;
     padding: 2.5vw;
     background-color: #fff;
     transition: width 0.5s ease;
@@ -302,30 +305,27 @@ h4 span{
 }
 .how-slide-box.is-open{
     width: 38vw;
-    gap: 4vw;
     background-color: #f9f9f9;
     border-radius: 0.7vw;
 }
 .how-slide-box .left-content{
+    width: 27vw;
     margin-left: -35vw;
     transition: margin-left 0.5s ease;
 }
 .how-slide-box.is-open .left-content{
     margin-left: 0;
 }
-.how-slide-list .img-box{
-    height: fit-content;
-}
 .how-slide-box .text-box{
     display: flex;
-    gap: 1.5vw;
+    gap: 1vw;
     margin-top: 2vw;
 }
-.how-slide-box .text-box h1{
+.how-slide-box .text-box h3{
     text-align: left;
     font-weight: normal;
 }
-.how-slide-box .box-num h1{
+.how-slide-box .box-num h3{
     font-weight: lighter;
     color: #999;
 }
@@ -426,4 +426,458 @@ h4 span{
 }
 .cert-box.is-open p {
     font-size: 1.4vw;
+}
+
+.logo-center{
+    width: 8.5vw;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .title.brite-img h1, .title.brite-img p{
+        color: #000;
+    }
+    .box-width{
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .box-width .img-box{
+        border-radius: 0.7vh;
+    }
+    .box-width + .img-list{
+        width: 30vh;
+        gap: 3vh;
+        margin: 3vh auto;
+        font-size: 1vh;
+        text-align: center;
+    }
+    .box-width + .img-list div{
+        flex: 0 0 3vh;
+        height: fit-content;
+    }
+    .bar-white{
+        width: 30vh;
+        margin: 0 auto 3vh auto;
+        color: #fff;
+        border-top: 1px solid #fff;
+    }
+    h4 span{
+        font-weight: 200;
+    }
+    .img-half{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1vh;
+        flex-wrap: wrap
+    }
+    .img-half p{
+        flex: 1;
+        font-weight: normal;
+    }
+    .img-half .img-box{
+        position: relative;
+        width: 43vh;
+        height: 35vh;
+        border-radius: 0.7vh;
+        overflow: hidden;
+    }
+    .img-half .img-box img{
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity .35s ease;
+    }
+    .img-half .img-box img.is-open{
+        opacity: 1;
+    }
+    .img-half .text-box{
+        flex: 1;
+        text-align: left;
+    }
+    .customers .text-box {
+        padding: 0 4vh 4vh 4vh;
+    }
+    .text-box h3{
+        margin-bottom: 1vh;
+    }
+    .text-box p{
+        font-size: 1.2vh;
+        line-height: 1.5;
+        margin-bottom: 2vh;
+    }
+    .img-half .text-box ul li{
+        padding: 1vh 0;
+    }
+    .customers .text-box  ul{
+        list-style:inside
+    }
+    .customers .text-box  ul li{
+        font-size: 1.2vh;
+        padding: .6vh 0;
+    }
+    .img-half .text-box ul li > p{
+        font-size: 1.5vh;
+        padding-left: 1.5vh;
+        margin-bottom: 1vh;
+        background-image: url("../images/btn_under_arrow_black.png");
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 2vh;
+        cursor: pointer;
+    }
+    .image-center-box{
+        justify-content: space-around;
+    }
+    .image-center-box .center-img-box{
+        width: 10vh;
+        margin: 0 auto;
+    }
+    .image-center-box h4{
+        font-size: 2vh;
+        font-weight: normal;
+        margin: 2vh auto;
+    }
+    .image-center-box button{
+        flex: 0.24;
+        padding: 2vh;
+        height: 30vh;
+    }
+    .image-center-box.platform{
+        justify-content: center;
+        gap: 2vh;
+
+    }
+    .image-center-box.platform button{
+        display: flex;
+        flex: 0 0 90%;
+        height: auto;
+    }
+     .image-center-box.platform .center-img-box{
+        width: 40vw;
+        margin-right: 1vh;
+     }
+    .image-center-box button h5{
+        font-size: 2vh;
+        color: #333;
+        margin: 2vh 0;
+    }
+    .image-center-box button *{
+        text-align: left;
+    }
+    .togle-list div{
+        height: 1px; 
+        overflow: hidden;
+        background-color: #f8f8f8;
+        border-radius: 0.7vh;
+        padding: 0 1.5vh;
+        font-size: 1vh;
+        transition: height .35s ease, padding-top .25s ease, padding-bottom .25s ease;
+    }
+    .togle-list div p{
+        margin: 1.5vh 0;
+    }
+    .togle-list p.is-open + div{
+        height: 8vh;
+    }
+    .togle-list button{
+        margin-top: 3vh;
+    }
+    .brite-list p{
+        opacity: .6;
+    }
+    .brite-list div{
+        background-color: #fff;
+    }
+    .brite-list p.is-open, .brite-list div p{
+        opacity: 1;
+    }
+    .img-box-list > div{
+        display: block;
+        justify-content: space-between;
+        gap: 2vh;
+        margin-bottom: 4vh;
+    }
+    .img-box-list .con-box div{
+        border-radius: 0.7vh;
+        margin-bottom: 2vh;
+    }
+    .img-box-list h5{
+        font-size: 1.5vh;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+    }
+    .img-box-list p{
+        font-size: 1.2vh;
+        text-align: left;
+        margin-top: 1vh;
+        text-align: center;
+    }
+     .img-box-list p:last-of-type{
+        margin-bottom: 4vh;
+     }
+
+    .sr-only {
+    position:absolute; 
+    width:1px; 
+    height:1px; 
+    margin:-1px; 
+    padding:0;
+    overflow:hidden; 
+    clip:rect(0 0 0 0); 
+    white-space:nowrap; 
+    border:0;
+    }
+    .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    font-weight: 200;
+    }
+    .compare-table thead{
+        border-bottom: 1px solid #eee;
+    }
+    .compare-table thead th {
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 2vh 1.2vh;
+    }
+    .compare-table tbody th {
+    width: 20%;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-weight: 600;
+    }
+    .compare-table thead th:last-of-type,
+    .compare-table tbody th,
+    .compare-table tbody td:last-of-type{
+        background: #f9f9f9;
+    }
+
+    .compare-table th,
+    .compare-table td {
+    padding: 1.2vh;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    }
+    .compare-table tr:last-child th,
+    .compare-table tr:last-child td {
+    border-bottom: 0;
+    }
+    .list-3dot, .list-4dot{
+        padding-left: 2vh;
+        font-size: 1.5vh;
+        text-align: left;
+        background-image: url("../images/list-3dot.png");
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: auto 80%;
+    }
+    .list-4dot{
+        margin-top: 4vh;
+        background-size: auto 93%;
+        background-image: url("../images/list-4dot.png");
+    }
+    .list-4dot p:not(:last-of-type){
+        margin-bottom: 3vh;
+    }
+    .list-3dot p:not(:last-of-type){
+        margin-bottom: 0.6vh;
+    }
+    .about-us .img-half div:first-of-type{
+        margin-right: 2vh;
+    }
+    .timeline {
+        width: fit-content;
+        display: grid;
+        grid-auto-rows: auto;
+        row-gap: .5vh;
+        margin: 4vh auto;
+        background-image: url("../images/list-dot.png"); /* 당신의 점이미지 경로 */
+        background-repeat: no-repeat;
+        background-size: auto 63.5vh;  
+        background-position: 18vh 2.9vh;
+    }
+    .timeline .t-row {
+        display: grid;
+        grid-template-columns: 10vh 8vh 1fr;
+        align-items: start;
+        column-gap: .8vh;
+    }
+
+    .timeline .year {
+        color: #999;
+        font-weight: lighter;
+        font-size: 4vh;
+        line-height: 1;
+    }
+    .timeline .month {
+        font-size: 1.5vh;
+        padding-top: 2vh;
+        color: #999;
+    }
+    .timeline .events p { 
+        text-align: left;
+        font-size: 1.5vh;
+        line-height: 2;
+        padding-top: 2vh;
+    }
+    .timeline .events p:last-child { 
+        margin-bottom: 0; 
+    }
+
+    .how-slide-list{
+        display: flex;
+    }
+    .how-slide-box{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 8.5vh;
+        height: 45vh;
+        overflow: hidden;
+        padding: 2.5vh;
+        background-color: #fff;
+        transition: width 0.5s ease;
+    }
+    .how-slide-box::after {
+    content: "";
+    position: absolute;
+    top: 1%;
+    right: 0;
+    height: 98%;
+    width: 0.2vh;
+    background-color: #f9f9f9;
+    }
+    .how-slide-box.is-open{
+        width: 38vh;
+        background-color: #f9f9f9;
+        border-radius: 0.7vh;
+    }
+    .how-slide-box .left-content{
+        width: 27vh;
+        margin-left: -35vh;
+        transition: margin-left 0.5s ease;
+    }
+    .how-slide-box.is-open .left-content{
+        margin-left: 0;
+    }
+    .how-slide-box .text-box{
+        display: flex;
+        gap: 1vh;
+        margin-top: 2vh;
+    }
+    .how-slide-box .text-box h3{
+        text-align: left;
+        font-weight: normal;
+    }
+    .how-slide-box .box-num h3{
+        font-weight: lighter;
+        color: #999;
+    }
+    .how-slide-box .text-box p{
+        text-align: left;
+        font-size: 1.2vh;
+        margin-top: 1vh;
+    }
+    .how-slide-box .bar-box{
+        display: none;
+        height: .2vh;
+        background-color: #eee;
+    }
+    .how-slide-box.is-open .bar-box{
+        display: block;
+    }
+    .how-slide-box .bar{
+        height: 100%;
+        width: 0%;
+        background-color: #132C6F;
+        transition: width .1s linear;
+    }
+    .how-slide-box .right-icon{
+        width: 3vh;
+    }
+    .how-slide-box .right-icon p{
+        font-size: .8vh;
+    }
+    .how-slide-box.is-open .icon-text{
+        display: none;
+    }
+
+    .company-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4vh;
+        margin: 2vh 0;
+    }
+    .company-nav nav{
+        padding: 1vh 3vh;
+        border-bottom: 1px solid #d9d9d9;
+        font-size: 1.3vh;
+        color: #d9d9d9;
+        cursor: pointer;
+    }
+    .company-nav nav.select{
+        color: #333;
+        border-bottom-color: #333;
+    }
+    .company-center > div{
+        display: flex;
+        width: 80vw;
+        margin: 0 auto 4vh auto;
+        gap: 2vh;
+    }
+    .company-center .img-box{
+        width: 8vh;
+        height: auto;
+    }
+    .company-center h4{
+        text-align: left;
+        line-height: 4;
+        font-size: 2vh;
+    }
+    .company-center p{
+        text-align: left;
+        font-size: 1.2vh;
+        margin: 0 0 1vh 1vh;
+    }
+
+    .certs {
+        display: flex;
+        align-items: center;
+        gap: 3vh;
+        margin-left: 4vh;
+        position: relative; 
+    }
+    .cert-box {
+        flex: 0 0 10vh;
+        background: #fff;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform .35s ease, flex-basis .35s ease;
+        will-change: transform;
+    }
+    .cert-box p {
+        margin-top: 1vh;
+        font-size: 1vh;
+        transition: opacity 0.3s ease;
+    }
+    .cert-box.is-open {
+        flex-basis: 20vh;
+        transform: scale(1.02);
+    }
+    .cert-box.is-open p {
+        font-size: 1.4vh;
+    }
+
+    .logo-center{
+        width: 8.5vh;
+        margin: 6vh auto 0 auto;
+    }
 }
