@@ -459,7 +459,7 @@ button.btn-big{
     background-size: 1.2vw;
 }
 .slide-text .text-list{
-    margin-top: 5vw;
+    margin-top: 2vw;
     height: 10vw;
 }
 .slide-text .text-list > p{
@@ -476,9 +476,6 @@ button.btn-big{
 .slide-text .img-list{
     margin: 2vw 0;
     font-size: 1vw;
-}
-.slide-text .img-list div{
-    height: 2vw;
 }
 .clients-box{
     width: 45vw;
@@ -979,9 +976,6 @@ footer *{
     .slide-text .img-list{
         margin: 2vh 0;
         font-size: 1vh;
-    }
-    .slide-text .img-list div{
-        height: 2vh;
     }
 
     .box-f{
