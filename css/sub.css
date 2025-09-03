@@ -61,14 +61,6 @@ h4 span{
 .customers .text-box {
     padding: 4vw;
 }
-.text-box h3{
-    margin-bottom: 1vw;
-}
-.text-box p{
-    font-size: 1.2vw;
-    line-height: 1.5;
-    margin-bottom: 2vw;
-}
 .img-half .text-box ul li{
     padding: 1vw 0;
 }
@@ -462,10 +454,6 @@ h4 span{
     }
     .text-box h3{
         margin: 2vh 0;
-    }
-    .text-box p{
-        font-size: 1.2vh;
-        margin-bottom: 2vh;
     }
     .customers .text-box ul li{
         font-size: 1.2vh;
