@@ -1,12 +1,13 @@
 const routes = {
-  "/":                 "/html/product-how.html",
+  "/":                 "/html/home.html",
   "/product-over":     "/html/product-overview.html",
   "/product-how":      "/html/product-how.html",
   "/platform":         "/html/platform.html",
   "/customers":        "/html/customers.html",
   "/plan":             "/html/plan.html",
   "/company-aboutAs":  "/html/company-aboutAs.html",
-  "/company-history":  "/html/company-history.html"
+  "/company-history":  "/html/company-history.html",
+  "/devicespecs":  "/html/devicespecs.html"
 };
 
 const app = document.getElementById("main-con");
