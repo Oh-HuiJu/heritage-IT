@@ -422,7 +422,37 @@ h4 span{
     margin: 0 auto;
 }
 
+/*추가 및 수정 코드*/
+.overview .img-list p{
+    margin-top: 2vw;
+}
+.overview-three-icon > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40vw;
+    flex: 0.32;
+    box-shadow: 0 0 .2vw rgba(0, 0, 0, 0.25);
+    border-radius: .5vw;
+    padding: 4vw 3vw;
+}
+.overview-three-icon .img-box{
+    width: 10vw;
+    margin: 0 auto;
+}
+.overview-three-icon span{
+    font-size: 1.5vw;
+    font-weight: 300;
+}
+.overview-three-icon h4{
+    font-weight: 700;
+}
 @media screen and (max-width: 744px) {
+    /*추가 및 수정 코드*/
+    .overview .img-list p{
+        margin-top: 2vh;
+    }
+
     .box-width{
         width: 90vw;
     }
