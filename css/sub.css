@@ -209,7 +209,6 @@ h4 span{
 }
 .list-3dot, .list-4dot{
     padding-left: 2vw;
-    font-size: 1.5vw;
     text-align: left;
     background-image: url("../images/list-3dot.png");
     background-position: left center;
@@ -217,12 +216,9 @@ h4 span{
     background-size: auto 80%;
 }
 .list-4dot{
-    margin-top: 4vw;
-    background-size: auto 93%;
+    background-size: auto 86%;
+    background-position: left 10%;
     background-image: url("../images/list-4dot.png");
-}
-.list-4dot p:not(:last-of-type){
-    margin-bottom: 3vw;
 }
 .list-3dot p:not(:last-of-type){
     margin-bottom: 0.6vw;
@@ -435,6 +431,7 @@ h4 span{
     box-shadow: 0 0 .2vw rgba(0, 0, 0, 0.25);
     border-radius: .5vw;
     padding: 4vw 3vw;
+    background-color: #fff;
 }
 .overview-three-icon .img-box{
     width: 10vw;
@@ -446,6 +443,82 @@ h4 span{
 }
 .overview-three-icon h4{
     font-weight: 700;
+}
+.how .img-list{
+    align-items: center;
+}
+.how .img-list > div:not(.dot){
+    flex: 0.18;
+    padding: 2vw;
+    box-shadow: 0 0 .3vw rgba(0, 0, 0, 0.1);
+    border-radius: .5vw;
+}
+.how .img-list .img-box{
+    width: 5vw;
+    margin: 0 auto;
+}
+.how .img-list p{
+    margin-top: 2vw;
+    font-size: 1.5vw;
+    font-weight: 200;
+    height: 4vw;
+}
+.how .img-list .dot{
+    background-color: #d9d9d9;
+    width: 5px;
+    height: 5px;
+    border-radius: 2vw;
+}
+.how .img-half .text-box{
+    margin-left: 2vw;
+}
+.how .img-half .text-box h5{
+    margin: 1vw 0 3vw 2vw;
+}
+.how .bg-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    width: 100vw;
+    height: 40vw;
+    background-color: #f9f9f9;
+}
+.how .banner-btn{
+    margin-top: 10vw;
+}
+.how .img-half{
+    gap: 5vw;
+}
+.how .img-half.text-toggle .img-box{
+    width: 50vw;
+    height: fit-content;
+    margin: 1vw 0;
+}
+.how .text-toggle .img-box > div{
+    display: none;
+}
+.how .text-toggle .img-box > div.is-open{
+    display: block;
+}
+.how .text-toggle .img-box img{
+    position: relative;
+    opacity: 1;
+    display: block;
+}
+.how .text-toggle .img-box p{
+    background-color: #f9f9f9;
+    padding: 1vw 0;
+    height: 6vw;
+}
+.how .togle-list p.is-open + div{
+    height: fit-content;
+}
+.how .img-half .text-box ul li > p{
+    margin-bottom: .5vw;
+}
+.how .togle-list div p{
+    margin: .5vw 0;
 }
 @media screen and (max-width: 744px) {
     /*추가 및 수정 코드*/
@@ -587,17 +660,10 @@ h4 span{
     .compare-table td {
         padding: 1.2vh;
     }
-    .list-3dot, .list-4dot{
+    .list-3dot{
         padding-left: 2vh;
         font-size: 1.5vh;
         background-size: auto 80%;
-    }
-    .list-4dot{
-        margin-top: 4vh;
-        background-size: auto 93%;
-    }
-    .list-4dot p:not(:last-of-type){
-        margin-bottom: 3vh;
     }
     .list-3dot p:not(:last-of-type){
         margin-bottom: 0.6vh;

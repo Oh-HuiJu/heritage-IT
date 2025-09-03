@@ -68,6 +68,7 @@ button:hover{
 button.btn-big{
     font-weight: 200;
     font-size: 1.2vw;
+    width: 15vw;
     padding: 0.8vw 3vw;
 }
 .btn-box-two{
@@ -103,9 +104,8 @@ button.btn-big{
     color: #fff;
 }
 .banner-btn{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 15vw;
     padding: 4vw 10vw;
     background-color: #f8f8f8;
 }
@@ -166,6 +166,9 @@ button.btn-big{
 }
 .image-slider-text p{
     display: none;
+    color: #fff;
+    padding-left: 1vw;
+    font-size: 1.5vw;
 }
 .image-slider-text p.active{
     display: block;
@@ -177,6 +180,8 @@ button.btn-big{
     border-radius: 1vw;
     background-color: rgba(255, 255, 255, 0.3);
     opacity: .6;
+    font-size: 1.5vw;
+    color: #fff;
 }
 .image-slider-nav p.active, .image-slider-nav p:hover{
     cursor: pointer;
@@ -244,9 +249,13 @@ button.btn-big{
     padding-top: 19vw;
 }
 .content-box{
+    position: relative;
     padding-top: 10vw;
     width: 100vw;
     text-align: center;
+}
+.content-box:last-of-type{
+    margin-bottom: 10vw;
 }
 .content-title-box{
     width: 50vw;
