@@ -523,7 +523,76 @@ h4 span{
 @media screen and (max-width: 744px) {
     /*추가 및 수정 코드*/
     .overview .img-list p{
+        margin-top: 2vw;
+    }
+    .overview-three-icon > div{
+        height: fit-content;
+        flex: 0.32;
+        border-radius: .5vw;
+        padding: 4vw 3vw;
+    }
+    .overview-three-icon > div h3{
+        height: 6vh;
+    }
+    .overview-three-icon .img-box{
+        width: 10vw;
+        padding: 2vh 0;
+    }
+    .overview-three-icon h4{
+        height: 9vh;
+    }
+    .overview-three-icon h5{
+        height: 9vh;
+    }
+    .overview-three-icon span{
+        font-size: 1.5vw;
+    }
+    .how .img-list > div:not(.dot){
+        flex: 0.18;
+        padding: 2vw;
+        box-shadow: 0 0 .3vw rgba(0, 0, 0, 0.1);
+        border-radius: .5vw;
+    }
+    .how .img-list .img-box{
+        width: 5vw;
+    }
+    .how .img-list p{
+        margin-top: 2vw;
+        font-size: 1.5vw;
+        font-weight: 200;
+        height: 4vw;
+    }
+    .how .img-half .text-box{
         margin-top: 2vh;
+        margin-left: 2vw;
+    }
+    .how .img-half .text-box h5{
+        margin: 1vw 0 3vw 2vw;
+    }
+    .how .bg-box{
+        top: 2vh;
+        z-index: -99;
+        height: 40vh;
+    }
+    .how .banner-btn{
+        margin-top: 10vw;
+    }
+    .how .img-half{
+        gap: 5vw;
+    }
+    .how .img-half.text-toggle .img-box{
+        width: 80vw;
+        margin: 1vw auto;
+    }
+    .how .text-toggle .img-box p{
+        padding: 1vw 0;
+        height: 6vw;
+    }
+    .how .img-half .text-box ul li > p{
+        margin-bottom: .5vw;
+    }
+    .how .togle-list div p{
+        margin: .5vw 0;
     }
 
     .box-width{
@@ -695,7 +764,7 @@ h4 span{
 
     .how-slide-box{
         width: 8.5vh;
-        height: 38vh;
+        height: 48vh;
         padding: 1vh;
     }
     .how-slide-box::after {

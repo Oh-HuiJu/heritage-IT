@@ -733,6 +733,7 @@ footer *{
         box-shadow: 0 0 0.4vh rgba(0, 0, 0, 0.30);
     }
     button.btn-big{
+        width: 15vh;
         font-size: 1.2vh;
         padding: 0.8vh 3vh;
     }
@@ -787,7 +788,7 @@ footer *{
         font-weight: 300;
         text-align: left;
     }
-    .title.brite-img h1, .title.brite-img p{
+    .title.brite-img h1, .title.brite-img p, .title.brite-img h2, .title.brite-img h3{
         color: #fff;
     }
     .title-nav-box{
