@@ -13,12 +13,17 @@ html{
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
+#main-con{
+    max-width: 2560px;
+    margin: 0 auto;
+}
 html::-webkit-scrollbar {
   display: none;
 }
 img{
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
     display: block;
 }
 html, body, textarea, input, a, p, pre, div, span, h5, h4, h3, h2, h1, ul, li {
