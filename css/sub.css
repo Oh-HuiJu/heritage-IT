@@ -2,6 +2,10 @@
     width: 80vw;
     margin: 0 auto;
 }
+.box-width + p{
+    width: 85vw;
+    margin: 0 auto;
+}
 .box-width .img-box{
     border-radius: 0.7vw;
 }
@@ -103,7 +107,6 @@ h4 span{
     margin: 0 auto;
     justify-content: center;
     gap: 2vw;
-
 }
 .image-center-box.platform button{
     flex: 0 0 30%;
@@ -640,8 +643,21 @@ h4 span{
     .plan{
         height: 83vh;
     }
+    .platform .icon-box{
+        display: block;
+    }
+    .platform .icon-box > div{
+        margin-top: 1vh;
+        display: flex;
+        align-items: center;
+        gap: 1vh;
+        padding: 1vh 2vh;
+    }
+    .platform .icon-box .img-box{
+        width: 10vh;
+    }
     .platform .icon-box h4{
-        height: 4vh;
+        height: 5vh;
     }
     .platform .bg-box{
         top: 90vh;
@@ -662,8 +678,11 @@ h4 span{
         text-align: left;
     }
     .platform-con .r-box h3{
-        font-size: 1.4vh;
+        font-size: 1vh;
         margin-bottom: .5vh;
+    }
+    .platform-con .r-box h2{
+        font-size: 1.8vh;
     }
     .overview .img-list p{
         margin-top: 2vw;
@@ -745,8 +764,9 @@ h4 span{
         border-radius: 0.7vh;
     }
     .box-width + .img-list{
-        width: 30vh;
+        width: 70vw;
         gap: 3vh;
+        flex-wrap: wrap;
         margin: 3vh auto;
         font-size: 1vh;
     }
@@ -757,6 +777,10 @@ h4 span{
         width: 30vh;
         margin: 0 auto 3vh auto;
     }
+     .bar-white + h4{
+        width: 80vw;
+        margin: 0 auto;
+     }
     .img-half{
         display: block;
         width: 100%;
@@ -767,9 +791,7 @@ h4 span{
         height: 60vw;
         border-radius: 0.7vh;
     }
-    .text-box h3{
-        margin: 2vh 0;
-    }
+    
     .customers .text-box ul li{
         font-size: 1.2vh;
         padding: .6vh 0;
@@ -793,6 +815,7 @@ h4 span{
         padding: 2vh;
     }
     .image-center-box.platform{
+        width: 80vw;
         gap: 2vh;
     }
     .image-center-box.platform button{
@@ -861,9 +884,12 @@ h4 span{
     .img-box-list p:last-of-type{
         margin-bottom: 4vh;
     }
-
+    .compare-table{
+        font-size: 1vh;
+    }
     .compare-table thead th {
-        padding: 2vh 1.2vh;
+        padding: 1vh .5vh;
+        font-size: 1.2vh;
     }
     .compare-table tbody th {
         width: 20%;

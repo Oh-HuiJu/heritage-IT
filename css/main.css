@@ -202,6 +202,13 @@ button.btn-big{
 }
 
 /*본문 공통*/
+.text-box h3{
+    margin: 1vh 0;
+}
+.text-box p{
+    line-height: 1.5;
+    margin-bottom: 1vh;
+}
 .flex-box{
     display: flex;
     justify-content: space-between;
@@ -225,7 +232,7 @@ button.btn-big{
     flex: 0.24;
     background-image: url("../images/bg-img.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 .main-4-icon .point-box .img-box{
     width: 6vw;
@@ -695,7 +702,7 @@ footer *{
     .media-v{
         display: block;
     }
-    .com-v, .title-nav, header nav, .footer-nav{
+    .com-v, .title-nav, header nav, .footer-nav, .img-main-box .flex-box{
         display: none;
     }
 
@@ -762,7 +769,7 @@ footer *{
 
     /*메인 이미지 공통*/
     .img-main-box{
-        height: 60vh;
+        height: 50vh;
         margin-top: 4vh;
         overflow: hidden;
     }
@@ -771,10 +778,10 @@ footer *{
         margin-top: 2vh;
     }
     .title, .title.box-h{
-        top: 70%;
+        top: 50%;
         transform: translateY(-50%);
         left: 5vh;
-        height: 40vh; 
+        height: 30vh; 
         width: calc(100vw - 20vw);
     }
     .title h1{
@@ -812,13 +819,15 @@ footer *{
         transform:translateX(-50%);
     }
     .main-4-icon .point-box{
-        padding: 0 1vh .5vh 1vh;
+        padding: 0 1vh 3vh 1vh;
         flex: 0.24;
+        background-color: #f9f9f9;
+        border-radius: .5vh;
     }
     .main-4-icon .point-box .img-box{
-        width: 5vh;
+        width: 3vh;
         margin: .7vh auto;
-        padding: 1vh;
+        padding: .5vh;
     }
     .main-4-icon .point-box .border{
         width: 10vw;
@@ -831,8 +840,11 @@ footer *{
         font-size: 1vh;
     }
     .main-4-icon .point-box h4{
-        height: 1.2vh;
+        height: 2.3vh;
         font-size: 1vh;
+    }
+    .main-4-icon .point-box h1{
+        font-size: 2vh;
     }
     .content-box{
         padding-top: 10vh;
@@ -883,7 +895,7 @@ footer *{
     .big-show-box{
         gap: 2vh;
         border-radius: .5vh;
-        padding: 2vh 3vh;
+        padding: 2vh 1vh;
     }
     .big-show-box .img-box{
         width: 10vh;
@@ -1015,10 +1027,11 @@ footer *{
         margin-bottom: 2vh;
     }
     .main-demo-box p{
-        width: 31vh;
+        width: 33vw;
+        font-size: 1vh;
     }
     .main-demo-box button{
-        margin-top: 4vh;
+        margin-top: .5vh;
     }
 
     /*header*/
