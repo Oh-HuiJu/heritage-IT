@@ -6,7 +6,8 @@ const routes = {
   "/customers":        "/html/customers.html",
   "/plan":             "/html/plan.html",
   "/company-aboutAs":  "/html/company-aboutAs.html",
-  "/company-history":  "/html/company-history.html"
+  "/company-history":  "/html/company-history.html",
+  "/devicespecs":  "/html/devicespecs.html"
 };
 
 const app = document.getElementById("main-con");

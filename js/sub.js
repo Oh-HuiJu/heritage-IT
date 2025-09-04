@@ -31,7 +31,6 @@ function bindToggleBox(el) {
   el.classList.toggle("is-open");
 }
 
-
 function initCerts() {
   const list = document.getElementById('certs');
   if (!list) return;
@@ -77,8 +76,36 @@ function initCerts() {
   }
 }
 
+function bindTextToggle(root = document) {
+    root.querySelectorAll(".text-toggle.img-half").forEach((wrap) => {
+      // 아코디언 헤더와 이미지 패널 매칭(순서 기반)
+      const headers = [...wrap.querySelectorAll(".togle-list ul > li > p")];
+      const panels  = [...wrap.querySelectorAll(".img-box > div")];
+      if (!headers.length || !panels.length) return;
+
+      const setActive = (idx) => {
+        headers.forEach((p, i) => p.classList.toggle("is-open", i === idx));
+        panels.forEach((box, i) => box.classList.toggle("is-open", i === idx));
+      };
+
+      // 초기 상태: 이미 열린 p가 있으면 그 인덱스, 없으면 0
+      let initIdx = headers.findIndex(p => p.classList.contains("is-open"));
+      if (initIdx < 0) initIdx = 0;
+      setActive(initIdx);
+
+      // 클릭 이벤트
+      headers.forEach((p, i) => {
+        p.addEventListener("click", () => {
+          setActive(i);
+        });
+      });
+    });
+  }
+
+
 window.bindToggleBox = bindToggleBox;
 document.addEventListener("route:loaded", () => {
   bindToggle();
   initCerts();
+  bindTextToggle();
 });

@@ -109,8 +109,10 @@ function initHeroSlider() {
   if (!sliderBox || alreadyInited(sliderBox)) return;
 
   const navItems   = sliderBox.querySelectorAll(".image-slider-nav p");
+  const navTexts   = sliderBox.querySelectorAll(".image-slider-text p");
   const slideTrack = sliderBox.querySelector(".slide-img-track");
   if (!slideTrack || !navItems.length) return;
+  if (!slideTrack || !navTexts.length) return;
 
   const slides = slideTrack.querySelectorAll("img");
   let currentIndex = 0;
@@ -118,6 +120,7 @@ function initHeroSlider() {
 
   function updateSlide(index) {
     navItems.forEach((item, i) => item.classList.toggle("active", i === index));
+    navTexts.forEach((item, i) => item.classList.toggle("active", i === index));
     slideTrack.style.transform = `translateX(-${index * 100}vw)`;
   }
   function nextSlide() {
