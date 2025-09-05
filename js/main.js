@@ -7,12 +7,11 @@ function initHeaderSubmenus() {
   const subComp  = header.querySelector('.nav-sub-company');
 
   const submenuMap = {
-    "/product-over":  subProd,
+    "/product-over":    subProd,
     "/company-aboutAs": subComp
   };
 
   const items = Array.from(nav.querySelectorAll('[data-route]'));
-
   let hideTimer = null;
 
   function hideAll() {
@@ -22,27 +21,43 @@ function initHeaderSubmenus() {
     clearTimeout(hideTimer);
     hideAll();
     const sub = submenuMap[route];
-    if (!sub) return; 
+    if (!sub) return;
     sub.classList.add('is-open');
   }
   function scheduleHide() {
     clearTimeout(hideTimer);
-    hideTimer = setTimeout(hideAll, 120);  // 약간의 지연으로 깜빡임 방지
+    hideTimer = setTimeout(hideAll, 120);
   }
-  items.forEach(el => {// 메뉴 호버 → 해당 서브 열기 / 떠나면 닫기 예약
+
+  // 메뉴 호버
+  items.forEach(el => {
     el.addEventListener('mouseenter', () => openFor(el.dataset.route));
     el.addEventListener('mouseleave', scheduleHide);
   });
-  [subProd, subComp].forEach(sub => { // 서브메뉴 위에 마우스 올리면 유지, 벗어나면 닫기
+
+  // 서브 영역 유지/닫기
+  [subProd, subComp].forEach(sub => {
     if (!sub) return;
     sub.addEventListener('mouseenter', () => clearTimeout(hideTimer));
     sub.addEventListener('mouseleave', scheduleHide);
+
+    // ✅ h3 여러 개 모두 닫기 이벤트 연결
+    const h3List = sub.querySelectorAll('h3');
+    h3List.forEach(h3 => {
+      const closeNow = () => { clearTimeout(hideTimer); hideAll(); };
+      h3.addEventListener('click', closeNow);
+      h3.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') closeNow();
+      });
+    });
   });
-  nav.addEventListener('focusin', (e) => { // 키보드 접근성(탭으로 포커스 이동 시 열고/닫기)
+
+  // 키보드 접근성
+  nav.addEventListener('focusin', (e) => {
     const el = e.target.closest('[data-route]');
     if (el) openFor(el.dataset.route);
   });
-  nav.addEventListener('focusout', (e) => { // 포커스가 헤더/서브메뉴 바깥으로 나가면 닫기
+  nav.addEventListener('focusout', (e) => {
     const to = e.relatedTarget;
     if (!header.contains(to)) hideAll();
   });
@@ -119,10 +134,15 @@ function initHeroSlider() {
   const intervalTime = 5000;
 
   function updateSlide(index) {
+    const viewportWidth = window.innerWidth;
+    const baseWidth = viewportWidth > 1920 ? 1920 : viewportWidth;
+    
     navItems.forEach((item, i) => item.classList.toggle("active", i === index));
     navTexts.forEach((item, i) => item.classList.toggle("active", i === index));
-    slideTrack.style.transform = `translateX(-${index * 100}vw)`;
+    
+    slideTrack.style.transform = `translateX(-${index * baseWidth}px)`;
   }
+
   function nextSlide() {
     currentIndex = (currentIndex + 1) % 3;
     updateSlide(currentIndex);

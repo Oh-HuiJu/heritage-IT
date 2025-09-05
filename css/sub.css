@@ -1,6 +1,11 @@
 .box-width{
-    width: 80vw;
+    width: 80%;
     margin: 0 auto;
+}
+@media screen and (max-width:1920px) {
+    .box-width{
+        width: 80vw;
+    }
 }
 .box-width + p{
     width: 85vw;
@@ -10,11 +15,16 @@
     border-radius: 0.7vw;
 }
 .box-width + .img-list{
-    width: fit-content;
+    width: 80%;
     gap: 3.5vw;
     margin: 3vw auto;
     font-size: 1vw;
     text-align: center;
+}
+@media screen and (max-width: 1920px) {
+    .box-width + .img-list{
+        width: fit-content;
+    }
 }
 .box-width + .img-list div{
     width: 4vw;
@@ -43,10 +53,17 @@ h4 span{
 }
 .img-half .img-box{
     position: relative;
-    width: 43vw;
-    height: 36vw;
+    width: 30vw;
+    height: 24vw;
     border-radius: 0.7vw;
     overflow: hidden;
+}
+@media screen and (max-width:1920px) {
+    .img-half .img-box{
+        width: 43vw;
+        height: 36vw;
+        border-radius: 0.7vw;
+    }
 }
 .img-half .img-box img{
     position: absolute;
@@ -66,7 +83,7 @@ h4 span{
     padding: 4vw;
 }
 .img-half .text-box ul li{
-    padding: 1vw 0;
+    padding: .5vw 0;
 }
 .customers .text-box  ul{
     list-style:inside
@@ -76,7 +93,7 @@ h4 span{
     padding: .6vw 0;
 }
 .img-half .text-box ul li > p{
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     padding-left: 1.5vw;
     margin-bottom: 1vw;
     background-image: url("../images/btn_under_arrow_black.png");
@@ -89,8 +106,22 @@ h4 span{
     justify-content: space-around;
 }
 .image-center-box .center-img-box{
-    width: 10vw;
+    width: 6vw;
+    height: 6vw;
     margin: 0 auto;
+}
+@media screen and (max-width:1920px) {
+    .image-center-box .center-img-box{
+        width: 10vw;
+        height: 10vw;
+        margin: 0 auto;
+    }
+    .img-half .text-box ul li{
+        padding: 1vw 0;
+    }
+    .img-half .text-box ul li > p{
+        font-size: 1.5vw;
+    }
 }
 .image-center-box h4{
     font-size: 2vw;
@@ -103,19 +134,31 @@ h4 span{
     height: 30vw;
 }
 .image-center-box.platform{
-    width: 60vw;
     margin: 0 auto;
     justify-content: center;
     gap: 2vw;
 }
 .image-center-box.platform button{
-    flex: 0 0 30%;
-    height: 30vw;
+    flex: 0 0 25%;
+    height: 24vw;
 }
 .image-center-box button h5{
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     color: #333;
     margin: 2vw 0;
+}
+@media screen and (max-width:1920px) {
+    .image-center-box button h5{
+        font-size: 1.5vw;
+    }
+    .image-center-box.platform{
+        width: 60vw;
+        gap: 2vw;
+    }
+    .image-center-box.platform button{
+        flex: 0 0 30%;
+        height: 30vw;
+    }
 }
 .togle-list div{
     height: 1px; 
@@ -127,10 +170,19 @@ h4 span{
     transition: height .35s ease, padding-top .25s ease, padding-bottom .25s ease;
 }
 .togle-list div p{
-    margin: 1.5vw 0;
+    margin: 1vw 0;
 }
 .togle-list p.is-open + div{
-    height: 8vw;
+    height: 6vw;
+    overflow-y: auto;
+}
+@media screen and (max-width:1920px) {
+    .togle-list div p{
+        margin: 1.5vw 0;
+    }
+    .togle-list p.is-open + div{
+        height: 8vw;
+    }
 }
 .togle-list button{
     margin-top: 3vw;
@@ -278,11 +330,18 @@ h4 span{
     display: flex;
     justify-content: space-between;
     width: 8.5vw;
-    height: 45vw;
+    height: 40vw;
     overflow: hidden;
-    padding: 2.5vw;
+    padding: 1.6vw;
     background-color: #fff;
     transition: width 0.5s ease;
+}
+@media screen and (max-width:1920px) {
+    .how-slide-box{
+        width: 8.5vw;
+        height: 45vw;
+        padding: 2.5vw;
+    }
 }
 .how-slide-box::after {
   content: "";
@@ -297,6 +356,7 @@ h4 span{
     width: 38vw;
     background-color: #f9f9f9;
     border-radius: 0.7vw;
+    gap: 1vw;
 }
 .how-slide-box .left-content{
     width: 27vw;
@@ -343,6 +403,7 @@ h4 span{
 }
 .how-slide-box .right-icon p{
     font-size: .8vw;
+    margin-top: .5vw;
 }
 .how-slide-box.is-open .icon-text{
     display: none;
@@ -380,23 +441,30 @@ h4 span{
 .company-center h4{
     text-align: left;
     line-height: 4;
-    font-size: 2vw;
+    font-size: 1.5vw;
+}
+@media screen and (max-width:1920px) {
+    .company-center h4{
+        font-size: 2vw;
+    }
 }
 .company-center p{
     text-align: left;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     margin: 0 0 1vw 8vw;
 }
 
 .certs {
     display: flex;
-    align-items: center;
-    gap: 3vw;
+    align-items: start;
+    gap: 2vw;
     margin-left: 4vw;
     position: relative; 
+    overflow-x: auto;
 }
 .cert-box {
-    flex: 0 0 10vw;
+    flex: 0 0 7vw;
+    width: 7vw;
     background: #fff;
     cursor: pointer;
     display: flex;
@@ -404,6 +472,7 @@ h4 span{
     align-items: center;
     transition: transform .35s ease, flex-basis .35s ease;
     will-change: transform;
+    margin-top: 3vw;
 }
 .cert-box p {
     margin-top: 1vw;
@@ -411,11 +480,31 @@ h4 span{
     transition: opacity 0.3s ease;
 }
 .cert-box.is-open {
-    flex-basis: 20vw;
+    flex-basis: 13vw;
     transform: scale(1.02);
+     margin-top: 0;
 }
 .cert-box.is-open p {
-    font-size: 1.4vw;
+    font-size: 1.2vw;
+}
+@media screen and (max-width:1920px) {
+    .certs {
+        gap: 3vw;
+        margin-left: 4vw;
+    }
+    .cert-box {
+        flex: 0 0 10vw;
+    }
+    .cert-box p {
+        margin-top: 1vw;
+        font-size: 1vw;
+    }
+    .cert-box.is-open {
+        flex-basis: 20vw;
+    }
+    .cert-box.is-open p {
+        font-size: 1.4vw;
+    }
 }
 
 .logo-center{
@@ -429,11 +518,18 @@ h4 span{
     box-shadow: 0 0 .5vw rgba(0, 0, 0, 0.1);
     border-radius: .5vw;
     padding: 2vw;
+    margin: .5vw 0 -.5vw 0;
     background-color: #fff;
+    transition: margin .35s ease;
+}
+.platform .icon-box > div:hover{
+    margin: 0;
+    box-shadow: 0 0 .5vw rgba(0, 0, 0, 0.3);
 }
 .platform .icon-box .img-box{
     width: 8vw;
-    margin: 3vw auto;
+    height: 8vw;
+    margin: 2vw auto;
 }
 .platform{
     position: relative;
@@ -441,11 +537,20 @@ h4 span{
 .platform .bg-box{
     position: absolute;
     z-index: -99;
-    top: 86vw;
+    top: 70vw;
     left: 0;
     background-color: #f9f9f9;
     width: 100%;
-    height: 145vw;
+    height: 113vw;
+}
+@media screen and (max-width:1920px) {
+    .platform .bg-box{
+        top: 86vw;
+        height: 145vw;
+    }
+    .platform .icon-box .img-box{
+        margin: 3vw auto;
+    }
 }
 .platform .icon-box h4{
     font-weight: 700;
@@ -489,14 +594,19 @@ h4 span{
 }
 .platform-con .t-box h3{
     width: fit-content;
-    font-size: 1.5vw ;
+    font-size: 1.2vw ;
     margin: 1vw auto 0 auto;
     padding: .5vw 5vw;
     border-radius: 1vw;
 }
 .platform-con .b-box{
-    padding: 2vw 8vw;
+    padding: 2vw 6vw;
     justify-content: space-around;
+}
+@media screen and (max-width:1920px) {
+    .platform-con .b-box{
+        padding: 2vw 8vw;
+    }
 }
 .platform-con .b-box >div:not(:first-of-type) h4{
     font-weight: 700;
@@ -527,11 +637,17 @@ h4 span{
     padding: 2vw;
     border-radius: .5vw;
     margin-top: 2vw;
+    font-size: 1vw;
 }
 .platform-con.box-2 .point-text{
     margin: -8vw 0 2vw 0;
-    padding-left: 42vw;
+    padding-left: 32.5vw;
     text-align: left;
+}
+@media screen and (max-width:1920px) {
+    .platform-con.box-2 .point-text{
+        padding-left: 42vw;
+    }
 }
 .platform-con.box-2{
     padding-top: 10vw;
@@ -544,12 +660,17 @@ h4 span{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 40vw;
+    height: 36vw;
     flex: 0.32;
     box-shadow: 0 0 .2vw rgba(0, 0, 0, 0.25);
     border-radius: .5vw;
     padding: 4vw 3vw;
     background-color: #fff;
+}
+@media screen and (max-width: 1920px) {
+    .overview-three-icon > div{
+    height: 40vw;
+}
 }
 .overview-three-icon .img-box{
     width: 10vw;
@@ -577,21 +698,42 @@ h4 span{
 }
 .how .img-list p{
     margin-top: 2vw;
-    font-size: 1.5vw;
+    font-size: 1vw;
     font-weight: 200;
-    height: 4vw;
+    height: 2vw;
+}
+@media screen and (max-width:1920px) {
+    .how .img-list p{
+        font-size: 1.5vw;
+        height: 4vw;
+    }
 }
 .how .img-list .dot{
     background-color: #d9d9d9;
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
     border-radius: 2vw;
+}
+.how .img-half .img-box{
+    height: 22vw;
 }
 .how .img-half .text-box{
     margin-left: 2vw;
 }
 .how .img-half .text-box h5{
-    margin: 1vw 0 3vw 2vw;
+    margin: 1vw 0 2vw 2vw;
+}
+.how .img-half .list-4dot div:last-of-type h5{
+    margin-bottom: 0;
+}
+@media screen and (max-width:1920px) {
+    .how .img-list .dot{
+        width: 5px;
+        height: 5px;
+    }
+    .how .img-half .text-box h5{
+        margin: 1vw 0 3vw 2vw;
+    }
 }
 .how .bg-box{
     position: absolute;
@@ -606,13 +748,16 @@ h4 span{
     margin-top: 10vw;
 }
 .how .img-half{
-    gap: 5vw;
+    gap: 2vw;
+    margin-bottom: 3vw;
+    align-items: start;
 }
 .how .img-half.text-toggle .img-box{
-    width: 50vw;
+    width: 60%;
     height: fit-content;
-    margin: 1vw 0;
+    margin-bottom: 1vw;
 }
+
 .how .text-toggle .img-box > div{
     display: none;
 }
@@ -637,6 +782,15 @@ h4 span{
 }
 .how .togle-list div p{
     margin: .5vw 0;
+}
+@media screen and (max-width:1920px) {
+    .how .img-half{
+        gap: 5vw;
+        margin-bottom: 3vw;
+    }
+    .how .img-half.text-toggle .img-box{
+        width: 50vw;
+    }
 }
 @media screen and (max-width: 744px) {
     /*추가 및 수정 코드*/
@@ -717,12 +871,6 @@ h4 span{
     }
     .how .img-list .img-box{
         width: 5vw;
-    }
-    .how .img-list p{
-        margin-top: 2vw;
-        font-size: 1.5vw;
-        font-weight: 200;
-        height: 4vw;
     }
     .how .img-half .text-box{
         margin-top: 2vh;
@@ -997,10 +1145,13 @@ h4 span{
         font-size: 1.2vh;
         margin: 0 0 1vh 1vh;
     }
-
     .certs {
+        overflow-x: auto;
         gap: 3vh;
         margin-left: 4vh;
+    }
+    .certs::-webkit-scrollbar{
+        display: none;
     }
     .cert-box {
         flex: 0 0 10vh;
@@ -1010,7 +1161,7 @@ h4 span{
         font-size: 1vh;
     }
     .cert-box.is-open {
-        flex-basis: 20vh;
+        flex-basis: 14vh;
     }
     .cert-box.is-open p {
         font-size: 1.4vh;
